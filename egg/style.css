@@ -1,0 +1,136 @@
+:root{
+    --hover: #bfbfbf;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position:relative;
+}
+#header{
+    position: absolute;
+    top: 0%;
+    overflow-y:hidden;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    box-shadow: -10px 20px 8vh #4e4e4e;
+    margin-bottom: 10vh;
+}
+
+#egg{
+    font-size: 5vh;
+}
+
+
+.bodyDiv{
+    margin-top: 10vh;
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 5vw;
+}
+
+#photoDiv{
+    width: 100%;
+    min-height: 25vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1vw;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.eggImage{
+    width: 20vw;
+    min-width: 300px;
+    object-fit: contain;
+}
+
+.eggImage:hover{
+    width: 21vw;
+    transition: 1s;
+}
+
+#textDiv{
+    margin-top: 10vh;
+    text-align: center;
+    
+    font-size: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#priceHeader{
+    text-align: center;
+    margin-top: 10vh;
+    font-size: 2.5vh;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#priceTable{
+    font-size: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table, td{
+    border: 1px solid;
+}
+
+td{
+    padding: 0 20vw 0 0;
+}
+
+#contactId{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vh;
+    text-align: center; 
+    list-style-type: none; 
+    margin: 0; 
+    margin-bottom: 0.5vh; 
+    font-size: 1.8vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px;
+    transition: 1s;
+}
+
+#contactId:hover{
+    background-color: rgb(255, 252, 247);
+    transition: 1s;
+}
+
+@media screen and (orientation:landscape) and (max-width: 920px){
+    #textDiv{
+        font-size: 2vw;
+    }
+    #priceHeader{
+        font-size: 2vw;
+    }
+    #priceTable{
+        font-size: 2vw;
+    }
+    td{
+        padding: 0 30vw 0 0;
+    }
+    #contactId{
+        font-size: 2vw;
+    }
+    #photoDiv{
+        min-height: 40vh;
+    }
+}
