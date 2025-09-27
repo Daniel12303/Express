@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div id="logo" onclick="home()">
+
+        </div>
+
+        <div id="searchBar"></div>
+
+        <div class="tab" id="home" onclick="home()">
+            Home
+        </div>
+        <div class="tab" id="genres">
+            Genre
+        </div>
+        <div class="tab" id="about">
+            About
+        </div>
+    </div>
+
+    <div id="middle">
+        <section id="imageDiv">
+            <div id="imageSlider">
+                <button onclick="left()" class="scroll" id="left"></button>
+                <button onclick="right()" class="scroll" id="right"></button>
+                <img src="uke1.jpg" alt="" class="sliderImg" id="image1">
+            </div>
+            <div id="heroDiv">
+                <h1 id="heroText">Want some chords?</h1>
+                <div id="heroLine"></div>
+                <p id="heroCaption">here you go</p>
+            </div>
+        </section>
+
+        <section class="section" id="genreSection">
+            <div id="genreSectionText">
+                <p class="text" id="genreHeadText">
+                    Genres
+                </p>
+            </div>
+            <div id="genreBoxes">
+                <div class="genreTabs" id="genre1" onclick="Drama()">
+                    <p class="genreTitle">Drama</p>
+                    <p class="genreText">Songs that invoke emotions, love, joy, and hope between us all.</p>
+                </div>
+
+                <div class="genreTabs" id="genre2" onclick="Religious()">
+                    <p class="genreTitle">Religious</p>
+                    <p class="genreText">Songs of Faith, Hope, and Love</p>
+                </div>
+
+                <div class="genreTabs" id="genre3" onclick="Love()">
+                    <p class="genreTitle">Love</p>
+                    <p class="genreText">Music for the heart, may it be love or grief.</p>
+                </div>
+
+                <div class="genreTabs" id="genre4" onclick="Comedy()">
+                    <p class="genreTitle">Comedy</p>
+                    <p class="genreText">Songs that mark a smile on our faces.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="shift()">
+    <div id="header">
+        <div id="logo" onclick="home()">
+
+        </div>
+
+        <div id="searchBar"></div>
+
+        <div class="tab" id="home" onclick="home()">
+            Home
+        </div>
+        <div class="tab" id="genres">
+            Genre
+        </div>
+        <div class="tab" id="about">
+            About
+        </div>
+
+        </div>
+    </div>
+
+    <div id="middle" style="scroll-snap-type: none">
+        <section class="genreSection" id="Drama">
+            <p id="Love" class="genreHead">Love</p>
+            <table class="genreTable">
+                <tr class="tableRow">
+                    <th class="tableContent" id="headerRow">Song Name</th>
+                    <th class="tableContent" id="headerRow">Author</th>
+                    <th class="tableContent" id="headerRow">Chords</th>
+                </tr>
+                <tr class="tableRow">
+                    <td class="tableContent" id="bodyRow"><a href="song.html" style="color: black;">The Cutest Pair
+                    </a></td>
+                    <td class="tableContent" id="bodyRow">Regina Song</td>
+                    <td class="tableContent" id="bodyRow">A7 Am B7 Bbm Bbmaj7 Bm7 C C7 Cm7 D Dm Em7 F G Gm7</td>
+                </tr>
+            </table>
+        </section>
+    <script src="index.js"></script>
+    </body>
+</html>

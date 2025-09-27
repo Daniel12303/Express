@@ -1,25 +1,21 @@
-const http = require('http')
-const { readFileSync, read } = require('fs');
+const express = require('express')
+const path = require('path')
+const app = express()
 
-//get all filies
+// setup static and middleware
+app.use(express.static('./public')) // all static files will be used and it works immediately
+// The common name for the static assets are public or static
 
-const homePage = readFileSync('./egg/index.html') // Synchronous, because it is needed to run before the server runs, and it only runs once
-const homeStyles = readFileSync('./egg/style.css')
-const homeImage = readFileSync('./egg/index.js')
+// Static assets are files that the server does not need to change
 
-const server = http.createServer((req, res) => {
-    const url = req.url;
-
-    if (url === '/') {
-        res.writeHead(200, { 'content-type': 'text/html' })
-        res.write(homePage)
-        res.end();
-    }
-    else if (url === '/styles.css') {
-        res.writeHead(200, { 'content-type': 'text/css' })
-        res.write(homeStyles)
-        res.end()
-    }
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './UkeleleTab/index.html')) // __dirname is the absolute path, you can also use path.join
 })
 
-server.listen(5000) 
+app.all('/*splat', (req, res) => {
+    res.status(404).send('Cannot get Resource')
+})
+
+app.listen(5000, () => {
+    console.log('Running at port 5000...')
+})
